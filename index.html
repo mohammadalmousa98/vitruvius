@@ -1,0 +1,815 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <!-- Improve responsiveness on mobile devices -->
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <!-- Search engine optimisation -->
+    <meta
+      name="description"
+      content="Vitruvius provides enterprise‑grade AI and IT solutions, including automation, e‑commerce development, large language model integrations and custom website generation."
+    />
+    <title>Vitruvius | AI &amp; IT Solutions for Enterprises</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Font Awesome for icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      referrerpolicy="no-referrer"
+    />
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="assets/favicon.png" />
+    <style>
+      /* Animation definitions */
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+          transform: translateY(20px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      /* Generic fade‑in class with delays */
+      .fade-in {
+        opacity: 0;
+      }
+      .animate-fadeIn {
+        animation: fadeIn 1s ease-out forwards;
+      }
+      .delay-1 {
+        animation-delay: 0.2s;
+      }
+      .delay-2 {
+        animation-delay: 0.4s;
+      }
+      .delay-3 {
+        animation-delay: 0.6s;
+      }
+      .delay-4 {
+        animation-delay: 0.8s;
+      }
+
+      .gradient-bg {
+        background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+      }
+
+      .service-card {
+        transition: all 0.3s ease;
+      }
+      .service-card:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1),
+          0 10px 10px -5px rgba(0, 0, 0, 0.04);
+      }
+      /* Smooth scrolling behaviour */
+      html {
+        scroll-behavior: smooth;
+      }
+    </style>
+  </head>
+  <body class="font-sans antialiased text-gray-800 bg-gray-50">
+    <!-- Navigation -->
+    <nav class="fixed w-full bg-white shadow-md z-50">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex justify-between h-20 items-center">
+          <div class="flex-shrink-0 flex items-center">
+            <!-- Use the uploaded and resized logo -->
+            <img
+              src="assets/logo.png"
+              alt="Vitruvius logo"
+              class="h-10 w-auto"
+              loading="lazy"
+            />
+            <span class="ml-3 text-xl font-semibold text-gray-900"
+              >Vitruvius</span
+            >
+          </div>
+          <div class="hidden md:block">
+            <div class="ml-10 flex items-center space-x-8">
+              <a
+                href="#home"
+                class="nav-link text-gray-900 hover:text-indigo-600 px-3 py-2 text-sm font-medium"
+                >Home</a
+              >
+              <a
+                href="#about"
+                class="nav-link text-gray-900 hover:text-indigo-600 px-3 py-2 text-sm font-medium"
+                >About</a
+              >
+              <a
+                href="#services"
+                class="nav-link text-gray-900 hover:text-indigo-600 px-3 py-2 text-sm font-medium"
+                >Services</a
+              >
+              <a
+                href="#contact"
+                class="nav-link text-gray-900 hover:text-indigo-600 px-3 py-2 text-sm font-medium"
+                >Contact</a
+              >
+            </div>
+          </div>
+          <div class="md:hidden">
+            <button
+              id="menu-toggle"
+              class="text-gray-900 hover:text-indigo-600 focus:outline-none"
+              aria-label="Toggle menu"
+            >
+              <svg
+                class="h-6 w-6"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+                aria-hidden="true"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M4 6h16M4 12h16M4 18h16"
+                />
+              </svg>
+            </button>
+          </div>
+        </div>
+      </div>
+      <!-- Mobile menu -->
+      <div id="mobile-menu" class="hidden md:hidden bg-white shadow-lg">
+        <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+          <a
+            href="#home"
+            class="block px-3 py-2 text-base font-medium text-gray-900 hover:text-indigo-600"
+            >Home</a
+          >
+          <a
+            href="#about"
+            class="block px-3 py-2 text-base font-medium text-gray-900 hover:text-indigo-600"
+            >About</a
+          >
+          <a
+            href="#services"
+            class="block px-3 py-2 text-base font-medium text-gray-900 hover:text-indigo-600"
+            >Services</a
+          >
+          <a
+            href="#contact"
+            class="block px-3 py-2 text-base font-medium text-gray-900 hover:text-indigo-600"
+            >Contact</a
+          >
+        </div>
+      </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="pt-24 pb-16 md:pt-32 md:pb-24 gradient-bg text-white">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="lg:grid lg:grid-cols-2 lg:gap-8 items-center">
+          <div class="fade-in">
+            <h1 class="text-4xl md:text-5xl font-bold leading-tight mb-6">
+              Enterprise‑Grade <span class="text-blue-400">AI Solutions</span>
+            </h1>
+            <p class="text-xl md:text-2xl text-blue-100 mb-8">
+              Specialising in AI automation, large language model integration and strategic technology implementation.
+            </p>
+            <div class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
+              <a
+                href="#contact"
+                class="bg-indigo-600 hover:bg-indigo-700 text-white px-8 py-3 rounded-lg font-semibold text-center transition duration-300 transform hover:scale-105"
+                >Get Started</a
+              >
+              <a
+                href="#services"
+                class="bg-white hover:bg-gray-100 text-indigo-700 px-8 py-3 rounded-lg font-semibold text-center transition duration-300 transform hover:scale-105"
+                >Our Services</a
+              >
+            </div>
+          </div>
+          <div class="mt-12 lg:mt-0 fade-in delay-1">
+            <img
+              src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80"
+              alt="Abstract representation of AI technology"
+              class="rounded-lg shadow-2xl transform hover:scale-105 transition duration-500"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-16 bg-white">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="lg:grid lg:grid-cols-2 lg:gap-12 items-center">
+          <div class="mb-12 lg:mb-0 fade-in">
+            <img
+              src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80"
+              alt="Vitruvius team discussing strategy"
+              class="rounded-lg shadow-lg"
+              loading="lazy"
+            />
+          </div>
+          <div class="fade-in delay-1">
+            <h2 class="text-3xl font-bold text-gray-900 mb-6">About Vitruvius</h2>
+            <p class="text-lg text-gray-600 mb-6">
+              We are AI and automation specialists focused on delivering enterprise‑grade solutions. Our team combines deep technical expertise with strategic business insight.
+            </p>
+            <p class="text-lg text-gray-600 mb-6">
+              We architect systems that leverage large language models and intelligent automation to solve complex business challenges at scale.
+            </p>
+            <div class="grid grid-cols-2 gap-4 mt-8">
+              <div class="flex items-center">
+                <div
+                  class="flex-shrink-0 bg-indigo-100 rounded-full p-3"
+                  aria-hidden="true"
+                >
+                  <i class="fas fa-check-circle text-indigo-600"></i>
+                </div>
+                <div class="ml-3">
+                  <p class="text-sm font-medium text-gray-900">Shopify Experts</p>
+                </div>
+              </div>
+              <div class="flex items-center">
+                <div
+                  class="flex-shrink-0 bg-indigo-100 rounded-full p-3"
+                  aria-hidden="true"
+                >
+                  <i class="fas fa-check-circle text-indigo-600"></i>
+                </div>
+                <div class="ml-3">
+                  <p class="text-sm font-medium text-gray-900">AI Specialists</p>
+                </div>
+              </div>
+              <div class="flex items-center">
+                <div
+                  class="flex-shrink-0 bg-indigo-100 rounded-full p-3"
+                  aria-hidden="true"
+                >
+                  <i class="fas fa-check-circle text-indigo-600"></i>
+                </div>
+                <div class="ml-3">
+                  <p class="text-sm font-medium text-gray-900">Proven Results</p>
+                </div>
+              </div>
+              <div class="flex items-center">
+                <div
+                  class="flex-shrink-0 bg-indigo-100 rounded-full p-3"
+                  aria-hidden="true"
+                >
+                  <i class="fas fa-check-circle text-indigo-600"></i>
+                </div>
+                <div class="ml-3">
+                  <p class="text-sm font-medium text-gray-900">Client Focused</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-16 bg-gray-50">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-16 fade-in">
+          <h2 class="text-3xl font-bold text-gray-900 mb-4">Our Services</h2>
+          <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+            We offer comprehensive AI and IT solutions tailored to your business needs
+          </p>
+        </div>
+        <div class="grid md:grid-cols-3 gap-8">
+          <!-- Service 1 -->
+          <div class="bg-white p-8 rounded-xl shadow-md service-card fade-in delay-1">
+            <div
+              class="bg-indigo-100 w-16 h-16 rounded-full flex items-center justify-center mb-6"
+            >
+              <i class="fas fa-globe text-indigo-600 text-2xl" aria-hidden="true"></i>
+            </div>
+            <h3 class="text-xl font-bold text-gray-900 mb-4">
+              AI &amp; Website Generation
+            </h3>
+            <p class="text-gray-600 mb-6">
+              Cutting‑edge AI solutions for website creation and automation that save you time and resources while delivering exceptional results.
+            </p>
+            <ul class="space-y-2">
+              <li class="flex items-center">
+                <i class="fas fa-check text-indigo-500 mr-2" aria-hidden="true"></i>
+                <span>Custom website development</span>
+              </li>
+              <li class="flex items-center">
+                <i class="fas fa-check text-indigo-500 mr-2" aria-hidden="true"></i>
+                <span>AI‑powered content generation</span>
+              </li>
+              <li class="flex items-center">
+                <i class="fas fa-check text-indigo-500 mr-2" aria-hidden="true"></i>
+                <span>Responsive design</span>
+              </li>
+            </ul>
+          </div>
+          <!-- Service 2 -->
+          <div class="bg-white p-8 rounded-xl shadow-md service-card fade-in delay-2">
+            <div
+              class="bg-indigo-100 w-16 h-16 rounded-full flex items-center justify-center mb-6"
+            >
+              <i class="fas fa-shopping-cart text-indigo-600 text-2xl" aria-hidden="true"></i>
+            </div>
+            <h3 class="text-xl font-bold text-gray-900 mb-4">
+              E‑commerce Solutions
+            </h3>
+            <p class="text-gray-600 mb-6">
+              Certified Shopify experts delivering scalable commerce platforms with AI‑powered enhancements.
+            </p>
+            <ul class="space-y-2">
+              <li class="flex items-center">
+                <i class="fas fa-check text-indigo-500 mr-2" aria-hidden="true"></i>
+                <span>Shopify store setup &amp; customisation</span>
+              </li>
+              <li class="flex items-center">
+                <i class="fas fa-check text-indigo-500 mr-2" aria-hidden="true"></i>
+                <span>Payment gateway integration</span>
+              </li>
+              <li class="flex items-center">
+                <i class="fas fa-check text-indigo-500 mr-2" aria-hidden="true"></i>
+                <span>Inventory management</span>
+              </li>
+            </ul>
+          </div>
+          <!-- Service 3 -->
+          <div class="bg-white p-8 rounded-xl shadow-md service-card fade-in delay-3">
+            <div
+              class="bg-indigo-100 w-16 h-16 rounded-full flex items-center justify-center mb-6"
+            >
+              <i class="fas fa-robot text-indigo-600 text-2xl" aria-hidden="true"></i>
+            </div>
+            <h3 class="text-xl font-bold text-gray-900 mb-4">
+              AI Automation &amp; LLM
+            </h3>
+            <p class="text-gray-600 mb-6">
+              Leverage the power of large language models and automation to streamline operations and enhance customer experiences.
+            </p>
+            <ul class="space-y-2">
+              <li class="flex items-center">
+                <i class="fas fa-check text-indigo-500 mr-2" aria-hidden="true"></i>
+                <span>Custom AI chatbots</span>
+              </li>
+              <li class="flex items-center">
+                <i class="fas fa-check text-indigo-500 mr-2" aria-hidden="true"></i>
+                <span>Process automation</span>
+              </li>
+              <li class="flex items-center">
+                <i class="fas fa-check text-indigo-500 mr-2" aria-hidden="true"></i>
+                <span>Data analysis &amp; insights</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="py-16 bg-gray-800 text-white">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid md:grid-cols-4 gap-8 text-center">
+          <div class="fade-in">
+            <div class="text-4xl font-bold mb-2">100+</div>
+            <div class="text-indigo-200">Projects Completed</div>
+          </div>
+          <div class="fade-in delay-1">
+            <div class="text-4xl font-bold mb-2">95%</div>
+            <div class="text-indigo-200">Success Rate</div>
+          </div>
+          <div class="fade-in delay-2">
+            <div class="text-4xl font-bold mb-2">50+</div>
+            <div class="text-indigo-200">Happy Clients</div>
+          </div>
+          <div class="fade-in delay-3">
+            <div class="text-4xl font-bold mb-2">24/7</div>
+            <div class="text-indigo-200">Support Available</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-16 bg-white">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="lg:grid lg:grid-cols-2 lg:gap-12">
+          <div class="mb-12 lg:mb-0 fade-in">
+            <h2 class="text-3xl font-bold text-gray-900 mb-6">Get In Touch</h2>
+            <p class="text-lg text-gray-600 mb-8">
+              Ready to transform your business with our AI and IT solutions? Fill out the form or contact us directly. We'll get back to you within 24 hours.
+            </p>
+            <div class="space-y-6">
+              <div class="flex items-start">
+                <div
+                  class="flex-shrink-0 bg-indigo-100 rounded-full p-3"
+                  aria-hidden="true"
+                >
+                  <i class="fas fa-map-marker-alt text-indigo-600"></i>
+                </div>
+                <div class="ml-4">
+                  <h3 class="text-lg font-medium text-gray-900">Our Office</h3>
+                  <p class="text-gray-600">123 Tech Street, Innovation City</p>
+                </div>
+              </div>
+              <div class="flex items-start">
+                <div
+                  class="flex-shrink-0 bg-indigo-100 rounded-full p-3"
+                  aria-hidden="true"
+                >
+                  <i class="fas fa-phone-alt text-indigo-600"></i>
+                </div>
+                <div class="ml-4">
+                  <h3 class="text-lg font-medium text-gray-900">Phone</h3>
+                  <p class="text-gray-600">+1 (555) 123‑4567</p>
+                </div>
+              </div>
+              <div class="flex items-start">
+                <div
+                  class="flex-shrink-0 bg-indigo-100 rounded-full p-3"
+                  aria-hidden="true"
+                >
+                  <i class="fas fa-envelope text-indigo-600"></i>
+                </div>
+                <div class="ml-4">
+                  <h3 class="text-lg font-medium text-gray-900">Email</h3>
+                  <p class="text-gray-600">contact@vitruviusright.com</p>
+                </div>
+              </div>
+            </div>
+            <div class="mt-12">
+              <h3 class="text-xl font-medium text-gray-900 mb-4">Follow Us</h3>
+              <div class="flex space-x-4">
+                <a
+                  href="#"
+                  class="bg-gray-100 hover:bg-indigo-100 w-10 h-10 rounded-full flex items-center justify-center transition duration-300"
+                  aria-label="Facebook"
+                >
+                  <i class="fab fa-facebook-f text-gray-600 hover:text-indigo-600"></i>
+                </a>
+                <a
+                  href="#"
+                  class="bg-gray-100 hover:bg-indigo-100 w-10 h-10 rounded-full flex items-center justify-center transition duration-300"
+                  aria-label="Twitter"
+                >
+                  <i class="fab fa-twitter text-gray-600 hover:text-indigo-600"></i>
+                </a>
+                <a
+                  href="#"
+                  class="bg-gray-100 hover:bg-indigo-100 w-10 h-10 rounded-full flex items-center justify-center transition duration-300"
+                  aria-label="LinkedIn"
+                >
+                  <i class="fab fa-linkedin-in text-gray-600 hover:text-indigo-600"></i>
+                </a>
+                <a
+                  href="#"
+                  class="bg-gray-100 hover:bg-indigo-100 w-10 h-10 rounded-full flex items-center justify-center transition duration-300"
+                  aria-label="Instagram"
+                >
+                  <i class="fab fa-instagram text-gray-600 hover:text-indigo-600"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="fade-in delay-1">
+            <div class="bg-white shadow-lg rounded-lg p-8">
+              <!-- Contact form uses formsubmit.co; after submission, visitors are redirected to thank-you.html -->
+              <form
+                id="contactForm"
+                class="space-y-6"
+                action="https://formsubmit.co/mnaalmosa@gmail.com"
+                method="POST"
+              >
+                <!-- Disable captcha -->
+                <input type="hidden" name="_captcha" value="false" />
+                <!-- Redirect to local thank-you page on success -->
+                <input
+                  type="hidden"
+                  name="_next"
+                  value="thank-you.html"
+                />
+                <div>
+                  <label
+                    for="name"
+                    class="block text-sm font-medium text-gray-700 mb-1"
+                    >Full Name</label
+                  >
+                  <input
+                    type="text"
+                    id="name"
+                    name="name"
+                    required
+                    class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 transition duration-300 outline-none"
+                  />
+                </div>
+                <div>
+                  <label
+                    for="email"
+                    class="block text-sm font-medium text-gray-700 mb-1"
+                    >Email Address</label
+                  >
+                  <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    required
+                    class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 transition duration-300 outline-none"
+                  />
+                </div>
+                <div>
+                  <label
+                    for="phone"
+                    class="block text-sm font-medium text-gray-700 mb-1"
+                    >Phone Number</label
+                  >
+                  <input
+                    type="tel"
+                    id="phone"
+                    name="phone"
+                    class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 transition duration-300 outline-none"
+                  />
+                </div>
+                <div>
+                  <label
+                    for="service"
+                    class="block text-sm font-medium text-gray-700 mb-1"
+                    >Service Interested In</label
+                  >
+                  <select
+                    id="service"
+                    name="service"
+                    class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 transition duration-300 outline-none"
+                  >
+                    <option value="">Select a service</option>
+                    <option value="AI &amp; Website Generation">
+                      AI &amp; Website Generation
+                    </option>
+                    <option value="E-commerce Services">
+                      E‑commerce Services
+                    </option>
+                    <option value="AI Automation &amp; LLM">
+                      AI Automation &amp; LLM
+                    </option>
+                    <option value="Other">Other</option>
+                  </select>
+                </div>
+                <div>
+                  <label
+                    for="message"
+                    class="block text-sm font-medium text-gray-700 mb-1"
+                    >Message</label
+                  >
+                  <textarea
+                    id="message"
+                    name="message"
+                    rows="4"
+                    class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 transition duration-300 outline-none"
+                  ></textarea>
+                </div>
+                <div>
+                  <button
+                    type="submit"
+                    class="w-full bg-indigo-600 hover:bg-indigo-700 text-white font-semibold py-3 px-4 rounded-lg transition duration-300 transform hover:scale-105"
+                  >
+                    Send Message
+                  </button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-8 border-t border-gray-800">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid md:grid-cols-4 gap-8">
+          <div class="mb-8 md:mb-0">
+            <div class="flex items-center mb-4">
+              <img
+                src="assets/logo.png"
+                alt="Vitruvius logo"
+                class="h-8 w-auto mr-2"
+                loading="lazy"
+              />
+              <span class="text-xl font-semibold">Vitruvius</span>
+            </div>
+            <p class="text-gray-400">
+              Delivering cutting‑edge AI and IT solutions to transform your business.
+            </p>
+          </div>
+          <div>
+            <h3 class="text-lg font-semibold mb-4">Services</h3>
+            <ul class="space-y-2">
+              <li>
+                <a
+                  href="#services"
+                  class="text-gray-400 hover:text-white transition duration-300"
+                  >AI &amp; Website Generation</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#services"
+                  class="text-gray-400 hover:text-white transition duration-300"
+                  >E‑commerce Services</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#services"
+                  class="text-gray-400 hover:text-white transition duration-300"
+                  >AI Automation &amp; LLM</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h3 class="text-lg font-semibold mb-4">Company</h3>
+            <ul class="space-y-2">
+              <li>
+                <a
+                  href="#about"
+                  class="text-gray-400 hover:text-white transition duration-300"
+                  >About Us</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#contact"
+                  class="text-gray-400 hover:text-white transition duration-300"
+                  >Contact</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="text-gray-400 hover:text-white transition duration-300"
+                  >Careers</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h3 class="text-lg font-semibold mb-4">Legal</h3>
+            <ul class="space-y-2">
+              <li>
+                <a
+                  href="#"
+                  class="text-gray-400 hover:text-white transition duration-300"
+                  >Privacy Policy</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="text-gray-400 hover:text-white transition duration-300"
+                  >Terms of Service</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="text-gray-400 hover:text-white transition duration-300"
+                  >Cookie Policy</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div
+          class="border-t border-gray-800 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center"
+        >
+          <p class="text-gray-400 text-sm mb-4 md:mb-0">
+            © 2025 Vitruvius Right. All rights reserved.
+          </p>
+          <div class="flex space-x-6">
+            <a
+              href="#"
+              class="text-gray-400 hover:text-white transition duration-300"
+              aria-label="Facebook"
+            >
+              <i class="fab fa-facebook-f"></i>
+            </a>
+            <a
+              href="#"
+              class="text-gray-400 hover:text-white transition duration-300"
+              aria-label="Twitter"
+            >
+              <i class="fab fa-twitter"></i>
+            </a>
+            <a
+              href="#"
+              class="text-gray-400 hover:text-white transition duration-300"
+              aria-label="LinkedIn"
+            >
+              <i class="fab fa-linkedin-in"></i>
+            </a>
+            <a
+              href="#"
+              class="text-gray-400 hover:text-white transition duration-300"
+              aria-label="Instagram"
+            >
+              <i class="fab fa-instagram"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button
+      id="back-to-top"
+      class="fixed bottom-8 right-8 bg-indigo-600 text-white w-12 h-12 rounded-full shadow-lg flex items-center justify-center transition duration-300 opacity-0 invisible hover:bg-indigo-700"
+      aria-label="Back to top"
+    >
+      <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <!-- JavaScript to handle interactions -->
+    <script>
+      // Mobile menu toggle
+      document.getElementById("menu-toggle").addEventListener("click", () => {
+        const menu = document.getElementById("mobile-menu");
+        menu.classList.toggle("hidden");
+      });
+
+      // Smooth scrolling for navigation links and collapse mobile menu
+      document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+        anchor.addEventListener("click", function (e) {
+          e.preventDefault();
+          const targetId = this.getAttribute("href");
+          if (targetId === "#") return;
+          const targetElement = document.querySelector(targetId);
+          if (targetElement) {
+            // Close mobile menu if open
+            const mobileMenu = document.getElementById("mobile-menu");
+            mobileMenu.classList.add("hidden");
+            // Scroll to target
+            window.scrollTo({
+              top: targetElement.offsetTop - 80,
+              behavior: "smooth",
+            });
+          }
+        });
+      });
+
+      // Back to top button visibility
+      const backToTopButton = document.getElementById("back-to-top");
+      window.addEventListener("scroll", () => {
+        if (window.pageYOffset > 300) {
+          backToTopButton.classList.remove("opacity-0", "invisible");
+          backToTopButton.classList.add("opacity-100", "visible");
+        } else {
+          backToTopButton.classList.remove("opacity-100", "visible");
+          backToTopButton.classList.add("opacity-0", "invisible");
+        }
+      });
+      backToTopButton.addEventListener("click", () => {
+        window.scrollTo({ top: 0, behavior: "smooth" });
+      });
+
+      // Intersection Observer for fade‑in animations
+      const faders = document.querySelectorAll('.fade-in');
+      const observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add('animate-fadeIn');
+            }
+          });
+        },
+        { threshold: 0.1 }
+      );
+      faders.forEach((el) => observer.observe(el));
+
+      // Active nav link highlighting based on scroll position
+      const sections = document.querySelectorAll('section[id]');
+      const navLinks = document.querySelectorAll('.nav-link');
+      const navObserver = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              navLinks.forEach((link) => {
+                link.classList.remove('text-indigo-600', 'font-semibold');
+              });
+              const activeLink = document.querySelector(
+                `.nav-link[href="#${entry.target.id}"]`
+              );
+              if (activeLink) {
+                activeLink.classList.add('text-indigo-600', 'font-semibold');
+              }
+            }
+          });
+        },
+        { threshold: 0.6 }
+      );
+      sections.forEach((section) => navObserver.observe(section));
+    </script>
+  </body>
+</html>

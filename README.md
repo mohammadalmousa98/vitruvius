@@ -2,6 +2,11 @@
 
 A modern, colorful mobile app for iOS and Android that helps parents track their baby's feeding, diaper changes, and sleep patterns. The app features AI-powered suggestions to help you stay on top of your baby's needs!
 
+## 📚 Documentation
+
+- **[⚡ Quick Start Guide](./QUICK_START.md)** - Get running in 5 minutes
+- **[🚀 Setup & Deployment Guide](./SETUP_AND_DEPLOYMENT.md)** - Complete guide for local development and app store publishing
+
 ## ✨ Features
 
 ### Core Tracking Features
